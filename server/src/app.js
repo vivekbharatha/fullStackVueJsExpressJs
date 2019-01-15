@@ -8,9 +8,9 @@ app.use(cors())
 app.use(bodyParser.json())
 app.use(morgan('tiny'))
 
-app.get('/status', (req, res) => {
+app.post('/register', (req, res) => {
   return res.send({
-    message: 'Hehe!'
+    message: `Your ${req.body.email} has been registered!`
   })
 })
 
